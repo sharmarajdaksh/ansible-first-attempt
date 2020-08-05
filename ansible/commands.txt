@@ -1,0 +1,8 @@
+# Ping all hosts
+ansible -i hosts all -m ping
+
+# Ping hosts in the webservers group
+ansible -i hosts webservers -m ping
+
+# Execute a playbook
+ansible-playbook -i hosts servers.yml

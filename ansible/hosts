@@ -1,0 +1,17 @@
+# UPDATE IPs ACCORDING TO YOUR DOCKER SETUP
+[webservers]
+ 172.17.0.2
+ 172.17.0.3
+
+ [dbservers]
+ 172.17.0.4
+
+ [webservers:vars]
+ ansible_ssh_user=root
+ # REPLACE WITH PATH ON YOUR COMPUTER
+ ansible_ssh_private_key_file=/home/sharmarajdaksh/sharmarajdaksh/Coding/Projects/DevOpsProjects/ansible-first-attempt/ansiblekey
+
+ [dbservers:vars]
+ ansible_ssh_user=root
+ # REPLACE WIITH PATH ON YOUR COMPUTER
+ ansible_ssh_private_key_file=/home/sharmarajdaksh/sharmarajdaksh/Coding/Projects/DevOpsProjects/ansible-first-attempt/ansiblekey  

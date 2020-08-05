@@ -1,0 +1,21 @@
+---
+- hosts: all
+
+  tasks:
+    - name: Run apt update
+      apt: update_cache=yes
+
+
+- hosts: webservers
+  tasks:
+    - name: Apache | Install Apache
+      apt: pkg={{ item }} state=latest
+      with_items:
+        - apache2
+
+- hosts: dbservers
+  tasks:
+    - name: MySQL | Install MySQL
+      apt: pkg={{ item }} state=latest
+      with_items:
+        - mariadb-server
